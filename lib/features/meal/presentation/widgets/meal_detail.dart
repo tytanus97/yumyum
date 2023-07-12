@@ -11,13 +11,18 @@ class MealDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+
       child: Column(children: [
         SizedBox(
           width: double.infinity,
           height: 300,
           child: Image.network(meal.imageUrl, fit: BoxFit.cover),
         ),
+        const SizedBox(height: 20),
+        Text('Ingredients',style: Theme.of(context).textTheme.titleLarge,),
         MealIngredients(ingredients: meal.ingredients),
+        Divider(),
+        Text('Steps',style: Theme.of(context).textTheme.titleLarge,),
         MealSteps(steps: meal.steps)
       ]),
     );
