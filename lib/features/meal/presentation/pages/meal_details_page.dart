@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../domain/models/meal_model.dart';
+import '../widgets/meal_detail.dart';
 
 class MealDetailsPage extends StatelessWidget {
   static const route = '/meal-details';
@@ -14,6 +15,6 @@ const MealDetailsPage({ Key? key }) : super(key: key);
       appBar: AppBar(
         title: Text(meal.title),
       ),
-      body: Container());
+      body: MealDetail(meal: meal));
   }
 }
