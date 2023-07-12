@@ -9,8 +9,7 @@ class CategoriesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: GridView(
+    return  GridView(
           padding: const EdgeInsets.all(25),
           gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
               maxCrossAxisExtent: 200,
@@ -21,10 +20,7 @@ class CategoriesPage extends StatelessWidget {
               .map((Category category) =>
                   CategoryItem(color: category.color, title: category.title, id: category.id,))
               .toList(),
-        ),
-        appBar: AppBar(
-          title: const Text('YumYum'),
-          backgroundColor: Colors.amber.withOpacity(.8),
-        ));
+        );
+
   }
 }

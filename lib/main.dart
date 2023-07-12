@@ -3,6 +3,8 @@ import 'package:yumyum/features/meal/presentation/pages/categories_page.dart';
 import 'package:yumyum/features/meal/presentation/pages/category_details_page.dart';
 import 'package:yumyum/features/meal/presentation/pages/meal_details_page.dart';
 
+import 'features/meal/presentation/pages/tabs_page.dart';
+
 void main() {
   runApp(YumYum());
 }
@@ -32,7 +34,7 @@ class YumYum extends StatelessWidget {
             )
           )
           ),
-      home: CategoriesPage(),
+      home: TabsPage(), 
       routes: {
        CategoryDetailsPage.route:(context) => CategoryDetailsPage(),
        MealDetailsPage.route:(context) => MealDetailsPage()
